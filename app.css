@@ -1,0 +1,199 @@
+@media (min-width: 1200px){
+	.container {
+	    width: 1200px;
+	}
+}
+
+html{
+	height: 800px;
+}
+body{
+	height: 100%;
+	margin-top: 50px;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.menu-top{
+	background: #1D181A;
+}
+
+.menu-top-head{
+	color: #FFFFFF !important;
+	padding: 0px 10px;
+}
+
+.main{
+	height: 400px;
+	background: #ECECEC;
+}
+
+.banner{
+	background: #ECECEC;
+	min-height: 100px;
+	color: black;
+	padding: 18px;
+}
+.brand-word{
+	font-size: 28px;
+    position: relative;
+    top: 7px;
+}
+.message{
+	margin: auto;
+    font-weight: bold;
+    min-height: 50px;
+    padding: 12px;
+    font-size: 30px;
+}
+
+.update{
+	width: 390px;
+	padding: 12px 12px 5px 12px;
+
+}
+.start{
+	background: white;
+	min-height: 50px;
+	padding: 20px 0px 0px 12px;
+	font-size: 18px;
+	font-weight: bold;
+	border-bottom: 3px solid #AE2D2F;
+}
+.start-back{
+	background: white;
+}
+.how{
+	float: right;
+    font-size: 20px;
+    position: relative;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+}
+.start-small{
+	background: white;
+	min-height: 20px;
+	padding: 15px 0 0 0;
+	font-size: 15px;
+	font-weight: bold;
+	border-bottom: 3px solid #AE2D2F;
+	min-width: 40px;
+    max-width: 260px;
+    margin-bottom: 25px;
+}
+.suggestion{
+	background: white;
+	min-height: 150px;
+	padding-top: 10px;
+}
+
+.learn{
+	margin : 0px 0 0 12px
+}
+
+.product{
+	height: 70px;
+	width: 70px;
+	border-radius: 70px;
+	background: #AE2D2F;
+	color: white;
+	text-align: center;
+}
+.product-box{
+	margin-bottom: 25px;
+}
+.word{
+	font-size: 48px;
+    vertical-align: middle;
+}
+
+.prod-wrap{
+	border-right: 1px solid #DAD4D3;
+}
+.head{
+	margin-bottom: 15px;
+}
+.name{
+	text-overflow: ellipsis;
+    overflow: hidden;
+    font-weight: bolder;
+}
+.info{
+	font-weight: lighter;
+	color: #CF7E74;
+}
+
+.options{
+	cursor: pointer;
+	color: #AE2D2F;
+
+}
+.cart{
+	margin-right: 8px;
+	font-size: 10px;
+	color: black;
+}
+.look{
+	font-size: 10px;
+	color: black;
+}
+
+.fa-triples{
+	height: 45px;
+    width: 45px;
+    border-radius: 45px;
+    background: white;
+    color: black;
+    text-align: center;
+    top: 3px;
+    position: relative;
+}
+
+.inv-small{
+	background: white;
+	min-height: 20px;
+	padding: 15px 0 0 0;
+	font-size: 17px;
+	font-weight: bold;
+    margin-bottom: 25px;
+    border-bottom: 3px solid #AE2D2F;
+    max-width: 180px;
+    text-align: center;
+}
+
+.details-inv{
+	background: white;
+    min-height: 300px;
+}
+.inp-info{
+	width: 100%;
+	background: #E8C5B3;
+    border: none;
+   	padding: 5px;
+}
+.inp-info:focus{
+	outline: none;
+}
+.inp-label{
+	padding-left: 10px;
+}
+.inv-box{
+	margin-bottom: 15px;
+}
+.inp-radio{
+	margin-right: 8px !important;
+    margin-left: 4px !important;
+}
+.rating > span:hover:before {
+   content: "\2605";
+   position: absolute;
+   cursor: pointer;
+}
+
+.margin-right-3{
+	margin-right: 3px;
+}
+.save-center{
+	text-align: center;
+	margin-top: 15px;
+}

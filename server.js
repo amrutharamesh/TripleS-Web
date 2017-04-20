@@ -5,7 +5,7 @@ var io = require('socket.io');
 
 var server = http.createServer(function(request, response){
     var path = url.parse(request.url).pathname;
-
+    
     switch(path){
         case '/':
              fs.readFile(__dirname + '/home.html', function(error, data){
