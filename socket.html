@@ -9,6 +9,13 @@
 	socket.on('message', function(data){
 	    console.log(data.message);
 	});
+  $(document).ready(function(){
+    $('#text').keypress(function(e){
+      socket.emit('client_data', {'letter': String.fromCharCode(e.charCode)});
+    });
+  });
    </script>
-   This is our sockethtml file</body>
+   This is our sockethtml file
+   <textarea id="text"></textarea>
+   </body>
 </html>

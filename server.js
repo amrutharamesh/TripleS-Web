@@ -8,12 +8,21 @@ var server = http.createServer(function(request, response){
 
     switch(path){
         case '/':
-            response.writeHead(200, {'Content-Type': 'text/html'});
-            response.write('hello world');
-            response.end();
+             fs.readFile(__dirname + '/home.html', function(error, data){
+                if (error){
+                    response.writeHead(404);
+                    response.write("opps this doesn't exist - 404");
+                    response.end();
+                }
+                else{
+                    response.writeHead(200, {"Content-Type": "text/html"});
+                    response.write(data, "utf8");
+                    response.end();
+                }
+            });
             break;
-        case '/socket.html':
-            fs.readFile(__dirname + path, function(error, data){
+        case '/socket':
+            fs.readFile(__dirname + path + '.html', function(error, data){
                 if (error){
                     response.writeHead(404);
                     response.write("opps this doesn't exist - 404");
@@ -39,4 +48,9 @@ server.listen(2000);
 var listener = io.listen(server);
 listener.sockets.on('connection', function(socket){
     socket.emit('message', {'message': 'hello world'});
+
+    //recieve client data
+      socket.on('client_data', function(data){
+        process.stdout.write(data.letter);
+      });
 });
