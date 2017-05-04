@@ -46,11 +46,15 @@ var server = http.createServer(function(request, response){
 server.listen(2000);
 
 var listener = io.listen(server);
-listener.sockets.on('connection', function(socket){
-    socket.emit('message', {'message': 'hello world'});
 
-    //recieve client data
-      socket.on('client_data', function(data){
-        process.stdout.write(data.letter);
-      });
+listener.sockets.on('connection', function(socket){
+  //send data to client
+  setInterval(function(){
+    socket.emit('date', {'date': new Date()});
+  }, 1000);
+
+  //recieve client data
+  socket.on('client_data', function(data){
+    process.stdout.write(data.letter);
+  });
 });
