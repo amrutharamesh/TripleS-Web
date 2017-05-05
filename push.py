@@ -10,7 +10,7 @@ def send_push():
     MY_API_KEY="AIzaSyAr6UZ6R9fT0RwDera7adrtSpzgRyYq4CM"
 
     messageTitle = 'TripleS'
-    messageBody = 'hey bro!'
+    messageBody = 'Odor detected!'
 
     data={
         "to" : "/topics/my_little_topic",

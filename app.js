@@ -53,7 +53,7 @@ listener.sockets.on('connection', function(socket){
 
 //TELNET SERVER
 var net = require('net');
-var HOST = '127.0.0.1';
+var HOST = '172.20.10.2';
 var PORT = 6971;
 // Create a server instance, and chain the listen function to it
 // The function passed to net.createServer() becomes the event handler for the 'connection' event
@@ -65,7 +65,8 @@ net.createServer(function(sock) {
     
     // Add a 'data' event handler to this instance of socket
     sock.on('data', function(data) {
-        gasValue = data.toString("utf8", 0, data.length - 1);
+        gasValue = data.toString("utf8", 0, data.length);
+        if(!(/^\d+$/.test(val))){ gasValue = "250";}
         arrayGasVals.push({"value" : gasValue, "ts" : Date.now()});
         console.log(gasValue);
         var spawn = require("child_process").spawn;
