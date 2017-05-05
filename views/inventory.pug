@@ -1,0 +1,168 @@
+html
+	head
+		title Welcome
+		script(src='/jquery-3.2.1.min.js')
+		script(src='/bootstrap/dist/js/bootstrap.min.js')
+		link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Open+Sans')
+		link(rel='stylesheet', href='/font-awesome/css/font-awesome.min.css')
+		link(rel='stylesheet', href='/bootstrap/dist/css/bootstrap.min.css')
+		link(rel='stylesheet', href='app.css')
+	body
+		nav.navbar.navbar-default.menu-top.navbar-fixed-top
+			.container-fluid
+				.navbar-header
+					button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1', aria-expanded='false')
+						span.sr-only Toggle navigation
+						|             
+						span.icon-bar
+						|             
+						span.icon-bar
+						|             
+						span.icon-bar
+						|           
+					a.navbar-brand.menu-top-head(href='/')
+						.fa.fa-triples
+							span.brand-word Ts
+				#bs-example-navbar-collapse-1.collapse.navbar-collapse
+					ul.nav.navbar-nav.navbar-right
+						li
+							a.menu-top-head(href='/inventory') Inventory
+						|             
+						li.dropdown
+							a.dropdown-toggle.menu-top-head(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
+								i.fa.fa-user-o
+								|  
+								span.caret
+								|               
+					ul.dropdown-menu
+						li
+							a(href='#') Action
+						|                 
+						li
+							a(href='#') Another action
+						|                 
+						li
+							a(href='#') Something else here
+						|                 
+						li.divider(role='separator')
+						|                 
+						li
+							a(href='#') Separated link
+		.container-fluid.main
+			.row
+				.col-lg-12.col-md-12.col-xs-12.banner
+					.container
+						.message
+							| Inventory
+						|             
+						p.update
+							| A list of all the items at your home.
+							| Add, update or remove items as you will!
+			.row
+				.col-lg-12.col-md-12.col-xs-12.start-back
+					.row
+						.container
+							.start
+								span Products
+								|                   
+								i.fa.fa-plus.how
+								|         
+				.col-lg-12.col-md-12.col-xs-12.details-inv
+					.row
+						.container
+							.inv-small Enter product details
+							|             
+						.container
+							.row
+								.col-lg-6.col-md-6.col-xs-6
+									.row
+										.col-lg-12.col-md-12.col-xs-12
+											.row.inv-box
+												.col-lg-6.col-md-6.col-xs-6
+													label.inp-label Name
+													|                             
+												.col-lg-6.col-md-6.col-xs-6
+													input.inp-info(type='text')
+													|                      
+									.row
+										.col-lg-12.col-md-12.col-xs-12
+											.row.inv-box
+												.col-lg-6.col-md-6.col-xs-6
+													label.inp-label Price
+													|                             
+												.col-lg-6.col-md-6.col-xs-6
+													input.inp-info(type='text')
+													|                      
+									.row
+										.col-lg-12.col-md-12.col-xs-12
+											.row.inv-box
+												.col-lg-6.col-md-6.col-xs-6
+													label.inp-label Buy date (Approx.)
+													|                             
+												.col-lg-6.col-md-6.col-xs-6
+													input.inp-info(type='text')
+													|                   
+								.col-lg-6.col-md-6.col-xs-6
+									.row
+										.col-lg-12.col-md-12.col-xs-12
+											.row.inv-box
+												.col-lg-6.col-md-6.col-xs-6
+													label.inp-label Quatnity
+													|                             
+												.col-lg-6.col-md-6.col-xs-6
+													input.inp-info(type='text')
+													|                     
+									.row
+										.col-lg-12.col-md-12.col-xs-12
+											.row.inv-box
+												.col-lg-6.col-md-6.col-xs-6
+													label.inp-label Rating
+													|                             
+												.col-lg-6.col-md-6.col-xs-6
+													.rating
+														span.margin-right-3 &star;
+														span.margin-right-3 &star;
+														span.margin-right-3 &star;
+														span.margin-right-3 &star;
+														span.margin-right-3 &star;
+													|                     
+									.row
+										.col-lg-12.col-md-12.col-xs-12
+											.row.inv-box
+												.col-lg-6.col-md-6.col-xs-6
+													label.inp-label Will buy again?
+													|                             
+												.col-lg-6.col-md-6.col-xs-6
+													input.inp-radio(type='radio')
+													| Yes
+													|                               
+													input.inp-radio(type='radio')
+													|  No
+													|                   
+										.col-lg-12.col-md-12.col-xs-12.save-center
+											button.btn.btn-success.btn-md.margin-right-3 Save
+											|                     
+											button.btn.btn-danger.btn-md Cancel
+				.col-lg-12.col-md-12.col-xs-12.suggestion
+					.row
+						.container
+							.inv-small Products you have 
+							|           
+						.container
+							.col-lg-3.col-md-3.col-xs-3.product-box
+								.row
+									.product-box
+										.col-lg-8.col-md-8.col-xs-8
+											.name Product Blah
+											|                        
+											.info $9.30
+											|                        
+											.options
+												i.fa.fa-info
+												|                          
+												span.look  Details
+												|                     
+										.col-lg-4.col-md-4.col-xs-4.prod-wrap
+											.product
+												span.word P
+

@@ -143,13 +143,10 @@ var listener = io.listen(server);
    });
 }); 
 
-
 //TELNET SERVER
 var net = require('net');
-
 var HOST = '127.0.0.1';
 var PORT = 6971;
-
 // Create a server instance, and chain the listen function to it
 // The function passed to net.createServer() becomes the event handler for the 'connection' event
 // The sock object the callback function receives UNIQUE for each connection
