@@ -1,0 +1,56 @@
+html
+	head
+		title Welcome
+		script(src='/socket.io/socket.io.js')
+		script(src='/jquery-3.2.1.min.js')
+		script(src='/bootstrap/dist/js/bootstrap.min.js')
+		script
+			include soc.js
+		link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Open+Sans')
+		link(rel='stylesheet', href='/font-awesome/css/font-awesome.min.css')
+		link(rel='stylesheet', href='/bootstrap/dist/css/bootstrap.min.css')
+		link(rel='stylesheet', href='app.css')
+	body
+		nav.navbar.navbar-default.menu-top.navbar-fixed-top
+			.container-fluid
+				.navbar-header
+					button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1', aria-expanded='false')
+						span.sr-only Toggle navigation
+						|             
+						span.icon-bar
+						|             
+						span.icon-bar
+						|             
+						span.icon-bar
+						|           
+					a.navbar-brand.menu-top-head(href='/')
+						.fa.fa-triples
+							span.brand-word Ts
+				#bs-example-navbar-collapse-1.collapse.navbar-collapse
+					ul.nav.navbar-nav.navbar-right
+						li
+							a.menu-top-head(href='/inventory') Inventory
+						|             
+						li.dropdown
+							a.dropdown-toggle.menu-top-head(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
+								i.fa.fa-user-o
+								|  
+								span.caret
+								|               
+					ul.dropdown-menu
+						li
+							a(href='#') Action
+						|                 
+						li
+							a(href='#') Another action
+						|                 
+						li
+							a(href='#') Something else here
+						|                 
+						li.divider(role='separator')
+						|                 
+						li
+							a(href='#') Separated link
+
+		div(id='date')
+		textarea(id='text')

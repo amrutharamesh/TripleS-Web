@@ -1,6 +1,8 @@
 var express = require('express')
-var app = express()
+var app = express();
 var path = require('path');
+var server = require('http').createServer(app);
+var io = require('socket.io')(server);
 
 app.set('view engine', 'pug');
 app.use(express.static('node_modules'));
@@ -22,10 +24,25 @@ app.get('/index', function (req, res) {
   res.render('index', { title: 'Hey', message: 'Hello there!' });
 });
 
-app.listen(2000, function () {
-  console.log('Example app listening on port 2000!');
-});
+server.listen(2000);
+var listener = io.listen(server);
+ 
+listener.sockets.on('connection', function(socket){
+ 	socket.emit('message', {'message': 'hello world'});
+	//send data to client
+	setInterval(function(){
+		socket.emit('date', {'date': new Date()});
+	}, 1000);
 
+ 	//recieve client data
+   	socket.on('client_data', function(data){
+     	process.stdout.write(data.letter);
+   	});
+	//recieve client data
+	socket.on('client_data', function(data){
+ 		process.stdout.write(data.letter);
+	});
+});
 
 //TELNET SERVER
 var net = require('net');
