@@ -71,31 +71,33 @@ html
 								span Product suggestions for you
 								|                 
 								i.fa.fa-question-circle-o.how
-								|         
-				.col-lg-12.col-md-12.col-xs-12.suggestion
-					.row
+								|
+				
+					.col-lg-12.col-md-12.col-xs-12.suggestion
+						.row
+							.container
+								.start-small Because you purchased them before
+								|
 						.container
-							.start-small Because you purchased them before
-							|           
-					.container
-						.col-lg-3.col-md-3.col-xs-3.product-box
-							.row
-								.product-box
-									.col-lg-8.col-md-8.col-xs-8
-										.name Product Blah
-										|                 
-										.info $9.30
-										|                 
-										.options
-											i.fa.fa-shopping-cart
-											|                          
-											span.cart Add to cart
-											|                          
-											i.fa.fa-info
-											|                          
-											span.look  Look inside
-											|                     
-									.col-lg-4.col-md-4.col-xs-4.prod-wrap
-										.product
-											span.word P
+							- for (var n=0; n<5; n++)  
+								.col-lg-3.col-md-3.col-xs-3.product-box
+									.row
+										.product-box
+											.col-lg-8.col-md-8.col-xs-8
+												.name Product Blah
+												|                 
+												.info $9.30
+												|                 
+												.options
+													i.fa.fa-shopping-cart
+													|                          
+													span.cart Add to cart
+													|                          
+													i.fa.fa-info
+													|                          
+													span.look  Look inside
+													|                     
+											.col-lg-4.col-md-4.col-xs-4.prod-wrap
+												.product
+													span.word P
 
