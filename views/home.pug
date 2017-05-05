@@ -1,6 +1,7 @@
 html
 	head
 		title Welcome
+		script(src='/socket.io/socket.io.js')
 		script(src='/jquery-3.2.1.min.js')
 		script(src='/bootstrap/dist/js/bootstrap.min.js')
 		script 
@@ -32,7 +33,7 @@ html
 						|             
 						li
 							a.menu-top-head(href='/notifications')
-								i.fa.fa-bell.margin-top-6
+								i.fa.fa-bell.margin-top-4
 								|             
 					ul.dropdown-menu
 						li
@@ -60,9 +61,7 @@ html
 							| A lots been going on here and we are excited to see you back!
 							| There are some new products that match your needs and you can check them out right here.
 							| Take a look!
-							|             
-						button.btn.btn-primary.btn-md.learn
-							| Learn more
+							|
 			.row
 				.col-lg-12.col-md-12.col-xs-12.start-back
 					.row
@@ -70,34 +69,14 @@ html
 							.start
 								span Product suggestions for you
 								|                 
-								i.fa.fa-question-circle-o.how
+								i.fa.fa-question-circle-o.how(title='Suggestions of different products for you based on the odor values detected')
 								|
 				
 					.col-lg-12.col-md-12.col-xs-12.suggestion
 						.row
 							.container
-								.start-small Because you purchased them before
+								.start-small Based on current odor values
 								|
 						.container
-							- for (var n=0; n<5; n++)  
-								.col-lg-3.col-md-3.col-xs-3.product-box
-									.row
-										.product-box
-											.col-lg-8.col-md-8.col-xs-8
-												.name Product Blah
-												|                 
-												.info $9.30
-												|                 
-												.options
-													i.fa.fa-shopping-cart
-													|                          
-													span.cart Add to cart
-													|                          
-													i.fa.fa-info
-													|                          
-													span.look  Look inside
-													|                     
-											.col-lg-4.col-md-4.col-xs-4.prod-wrap
-												.product
-													span.word P
+							.row#main-suggest
 

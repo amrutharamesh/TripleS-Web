@@ -78,7 +78,7 @@ body{
 	font-weight: bold;
 	border-bottom: 3px solid #AE2D2F;
 	min-width: 40px;
-    max-width: 260px;
+    max-width: 210px;
     margin-bottom: 25px;
 }
 .suggestion{
@@ -132,10 +132,12 @@ body{
 	margin-right: 8px;
 	font-size: 10px;
 	color: black;
+	margin-left: 4px;
 }
 .look{
 	font-size: 10px;
 	color: black;
+	margin-left: 4px;
 }
 
 .fa-triples{
@@ -197,9 +199,13 @@ body{
 	text-align: center;
 	margin-top: 15px;
 }
-.margin-top-8{
-	margin-top: 6px;
+.margin-top-4{
+	margin-top: 4px;
 }
 .notification{
-	
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	min-height: 40px;
+    background: #CF7E74;
+    padding: 10px;
 }
