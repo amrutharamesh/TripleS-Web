@@ -31,12 +31,10 @@ html
 						li
 							a.menu-top-head(href='/inventory') Inventory
 						|             
-						li.dropdown
-							a.dropdown-toggle.menu-top-head(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
-								i.fa.fa-user-o
-								|  
-								span.caret
-								|               
+						li
+							a.menu-top-head(href='/notifications')
+								i.fa.fa-bell
+								|                
 					ul.dropdown-menu
 						li
 							a(href='#') Action
@@ -52,5 +50,28 @@ html
 						li
 							a(href='#') Separated link
 
-		div(id='date')
-		textarea(id='text')
+		.container-fluid.main
+			.row
+				.col-lg-12.col-md-12.col-xs-12.banner
+					.container
+						.message
+							| Your notifications!
+							|             
+						p.update
+							| You can see the notifications from the Odor system here!
+							| See when and how much odor was detected!
+							|
+			.row
+				.col-lg-12.col-md-12.col-xs-12.start-back
+					.row
+						.container
+							.start
+								span Notifications for you
+								|                 
+								i.fa.fa-question-circle-o.how
+								|
+					.col-lg-12.col-md-12.col-xs-12.suggestion.save-center
+							.container.save-center
+									.col-lg-12.col-md-12.col-xs-12.product-box#main-notify
+												
+				

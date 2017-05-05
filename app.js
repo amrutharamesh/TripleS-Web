@@ -3,6 +3,8 @@ var app = express();
 var path = require('path');
 var server = require('http').createServer(app);
 var io = require('socket.io')(server);
+var gasValue = '';
+var arrayGasVals = [];
 
 app.set('view engine', 'pug');
 app.use(express.static('node_modules'));
@@ -31,8 +33,8 @@ listener.sockets.on('connection', function(socket){
  	socket.emit('message', {'message': 'hello world'});
 	//send data to client
 	setInterval(function(){
-		socket.emit('date', {'date': new Date()});
-	}, 1000);
+		socket.emit('notify', {'gasInfo': arrayGasVals});
+	}, 100);
 
  	//recieve client data
    	socket.on('client_data', function(data){
@@ -58,7 +60,8 @@ net.createServer(function(sock) {
     
     // Add a 'data' event handler to this instance of socket
     sock.on('data', function(data) {
-        var gasValue = data.toString("utf8", 0, data.length - 1);
+        gasValue = data.toString("utf8", 0, data.length - 1);
+        arrayGasVals.push({"value" : gasValue, "ts" : Date.now()});
         console.log(gasValue);
         var spawn = require("child_process").spawn;
         var process = spawn('python',["push.py"]);
