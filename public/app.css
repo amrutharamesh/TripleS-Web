@@ -206,6 +206,10 @@ body{
 	font-family: 'Open Sans', sans-serif;
 	font-size: 14px;
 	min-height: 40px;
-    background: #CF7E74;
+   	background: #ECECEC;
     padding: 10px;
+    margin-bottom : 5px;
+}
+.notification-val{
+	text-align: left;
 }
